@@ -1,4 +1,4 @@
-# Cracking-The-Code-andstuff
+# Cracking Notes :)
 
 ## Chapter VI - BIG O
 Big O is the language and metric we use to describe the efficiency of algorithms. 
