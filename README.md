@@ -24,8 +24,6 @@ We also drop the non-dominant terms.
 - O(n + logn) --> O(n)
 - O(5*2^n +1000n) --> O(2^n)
 
-<img src=”https://entcheva.github.io/images/big-o.jpg” height="150" width ="150">
-
 #### Multi-Part Algorithms: ADD vs MULTIPLY
 
 Ex 1 --> Add the runtimes O(A+B)
