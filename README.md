@@ -98,28 +98,28 @@ Dynamic, which means "no running out of space for allocation"!
 
 
 #### Arrays VS Linked Lists
---> memory allocation
-a) array = The entire array is stored in a contiguous block of memory.
-b) linked list = Different elements are stored at different memory locations.
+--> memory allocation </br>
+a) array = The entire array is stored in a contiguous block of memory. </br>
+b) linked list = Different elements are stored at different memory locations. </br>
 
---> size
-a) array = The size of an array is specified at the time of declaration. But you can resize (allocate more memory). Sometimes you may lose an auxiliar pointer because of that :(
-b) linked list = Data items can be added or removed from the linked list whenever desired.
+--> size </br>
+a) array = The size of an array is specified at the time of declaration. But you can resize (allocate more memory). Sometimes you may lose an auxiliar pointer because of that :( </br>
+b) linked list = Data items can be added or removed from the linked list whenever desired. </br>
 
---> space utilization
-a) array = Due to contiguous allocation, an array can only be stored where there is a large block of free space is available.
-b) linked list = Different elements are stored at different locations; hence, linked lists can be made within small chunks of free space.
+--> space utilization </br>
+a) array = Due to contiguous allocation, an array can only be stored where there is a large block of free space is available. </br>
+b) linked list = Different elements are stored at different locations; hence, linked lists can be made within small chunks of free space. </br>
 
---> space consumption
-a) array = Space consumption is overall less.
-b) linked list = Space is required to store pointers next to nodes.
+--> space consumption </br>
+a) array = Space consumption is overall less. </br>
+b) linked list = Space is required to store pointers next to nodes. </br>
 
---> accessing elements
-a) array = Any element can be directly indexed in O(1)O(1) worst-case time.
-b) linked list = The list needs to be traversed from the first element up to the required element, taking O(n)O(n) worst-case time.
+--> accessing elements </br>
+a) array = Any element can be directly indexed in O(1)O(1) worst-case time. </br>
+b) linked list = The list needs to be traversed from the first element up to the required element, taking O(n)O(n) worst-case time. </br>
 
---> search options
-a) array = Linear search and Binary search (if sorted).
-b) linked list = Linear search only.
+--> search options </br>
+a) array = Linear search and Binary search (if sorted). </br>
+b) linked list = Linear search only. </br>
 
 
