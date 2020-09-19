@@ -97,7 +97,7 @@ The benefit of a linked list it that you can add and remove from the beginning o
 Dynamic, which means "no running out of space for allocation"!
 
 
-#### Arrays VS Linked Lists
+##### Arrays VS Linked Lists
 --> memory allocation </br>
 a) array = The entire array is stored in a contiguous block of memory. </br>
 b) linked list = Different elements are stored at different memory locations. </br>
@@ -121,5 +121,14 @@ b) linked list = The list needs to be traversed from the first element up to the
 --> search options </br>
 a) array = Linear search and Binary search (if sorted). </br>
 b) linked list = Linear search only. </br>
+
+
+## Hash Table
+Hash table (hash map) is a data structure that implements an associative array abstract data type, a structure that can map keys to values. It uses a hash function to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored. </br>
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash collisions where the hash function generates the same index for more than one key. We need to treat those collisions. </br>
+In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. </br>
+The idea of hashing is to distribute the entries (key/value pairs) across an array of buckets. Given a key, the algorithm computes an index that suggests where the entry can be found. A basic requirement is that the function should provide a uniform distribution of hash values. A non-uniform distribution increases the number of collisions and the cost of resolving them. </br>
+If the number of collisions if very high, the worst case runtime is O(n), where n is the number of keys. However, the best implementation would be O(1). Alternatively, we can implement hash tables with a balanced binary search tree, which gives us an O(logN) lookup time. 
+
 
 
