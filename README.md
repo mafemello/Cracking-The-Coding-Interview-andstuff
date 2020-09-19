@@ -86,7 +86,40 @@ int f (int n) {
 Although we have O(2^n) nodes in the tree total, only O(n) exist at any given time. Therefore, we would only need to have O(n) memory available.
 
 ## Arrays 
-Data structure that can be selected by indices computed at run-time. 
+Data structure (collection of elements) that can be selected by indices (or key) computed at run-time. Elements are selected by it's position. 
+Advantage: quick access to the elements, but, they have fixed size.
+The elements are stored in a contiguous memory allocation, which means easier access as well. Easier when you need to find a specified element. 
 
+## Linked List
+An abstract data structure, that represents a sequence of nodes. Each node points to the next node in the linked list. A doubly linked list gives each node pointers to both the next node ant the previous node. 
+Unlike an array, a linked list does not provide constant time access to a particular "index". This means that if you need to find an element, you need to iterate through K elements first. O(n).
+The benefit of a linked list it that you can add and remove from the beginning of the list in constant time. 
+Dynamic, which means "no running out of space for allocation"!
+
+
+#### Arrays VS Linked Lists
+--> memory allocation
+a) array = The entire array is stored in a contiguous block of memory.
+b) linked list = Different elements are stored at different memory locations.
+
+--> size
+a) array = The size of an array is specified at the time of declaration. But you can resize (allocate more memory). Sometimes you may lose an auxiliar pointer because of that :(
+b) linked list = Data items can be added or removed from the linked list whenever desired.
+
+--> space utilization
+a) array = Due to contiguous allocation, an array can only be stored where there is a large block of free space is available.
+b) linked list = Different elements are stored at different locations; hence, linked lists can be made within small chunks of free space.
+
+--> space consumption
+a) array = Space consumption is overall less.
+b) linked list = Space is required to store pointers next to nodes.
+
+--> accessing elements
+a) array = Any element can be directly indexed in O(1)O(1) worst-case time.
+b) linked list = The list needs to be traversed from the first element up to the required element, taking O(n)O(n) worst-case time.
+
+--> search options
+a) array = Linear search and Binary search (if sorted).
+b) linked list = Linear search only.
 
 
