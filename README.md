@@ -84,3 +84,9 @@ int f (int n) {
 }
 ```
 Although we have O(2^n) nodes in the tree total, only O(n) exist at any given time. Therefore, we would only need to have O(n) memory available.
+
+## Arrays 
+Data structure that can be selected by indices computed at run-time. 
+
+
+
