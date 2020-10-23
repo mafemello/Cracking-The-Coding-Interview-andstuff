@@ -4,37 +4,35 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
+#include <map>
 using namespace std;
 
-bool checkPermutation (string first_word, string second_word) {
+bool isPermutation (string a, string b) {
+	map<char,int> m;
+	map<char,int> n;
 
-	// first we can make a previous checking to see if they, at least, are the same size
-	if (first_word.size() != second_word.size()) 
-		return false;
-	// making a more serious checking	
-	sort(first_word.begin(), first_word.end());
-	sort(second_word.begin(), second_word.end());
+	if (a.size() != b.size()) return false;
 
-	for (int i = 0; i < first_word.size(); i++) {
-		if (first_word[i] == second_word[i]) {
-			return true;
-		}
-	}
-	return false;
+	for (int i = 0; i < a.size(); i++) 
+		m[a[i]]++;
+
+	for (int j = 0; j < b.size(); j++) 
+		n[b[j]]++;
+
+	if (!equal(m.begin(), m.end(), n.begin())) return false;
+
+	return true;
 }
+
 
 int main (void) {
 
-	string first_word, second_word;
-	cin >> first_word;
-	cin >> second_word;
+	string a = "abc";
+	string b = "cba";
 
-	if (checkPermutation (first_word, second_word)) {
-		cout << "permutation!\n";
-	} else {
-		cout << "not permutation\n";
-	}
+	if (isPermutation (a,b))
+		printf ("permutation\n");
+	else printf("not permutation\n");
 
 	return 0;
 }
