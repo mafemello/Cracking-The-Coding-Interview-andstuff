@@ -3,30 +3,29 @@
 */
 #include <iostream>
 #include <vector>
+#include <string>
+#include <map>
 using namespace std;
 
-bool unique (string word) {
+bool isunique (string s) {
+	map<char,int> m;
 
-	vector<int>freq(word.size());
-	for (int w : word) {
-		freq[w] += 1;
-		if (freq[w] > 1) {
-			return false; // has repeated characters
-		}
-	}
-	return true; // unique
+	for (int i = 0; i < s.size(); i++) 
+		m[s[i]]++;
+
+	for (auto i:m)
+		if (i.second > 1) return true;
+
+	return false;
 }
+
 
 int main (void) {
 
-	string word;
-	cin >> word;
-
-	if (unique (word)) {
-		cout << "unique!\n";
-	} else {
-		cout << "not unique...\n";
-	}
+	string s = "mariafernanda";
+	if (isunique (s))
+		printf ("has duplicates\n");
+	else printf("doesn't have duplicates\n");
 
 	return 0;
 }
